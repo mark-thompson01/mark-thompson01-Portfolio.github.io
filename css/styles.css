@@ -112,3 +112,22 @@ ul.button-list a:hover {
   margin: 10px 0; /* Add spacing between list items */
 }
 
+/* Default link color (blue) */
+a {
+  color: #1e90ff; /* Blue hyperlink color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Link hover effect */
+a:hover {
+  color: #ff7f50; /* Coral color on hover */
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Visited links (to reset purple color) */
+a:visited {
+  color: #1e90ff; /* Keep links blue even after visiting */
+}
+
+
