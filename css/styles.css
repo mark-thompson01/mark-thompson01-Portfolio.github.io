@@ -100,3 +100,15 @@ ul.button-list a:hover {
   margin: 5px 0; /* Add spacing between items */
   list-style: disc; /* Use bullet points for certifications */
 }
+
+/* Remove bullet points for specific list */
+.no-bullets {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+  text-align: center; /* Center align list */
+}
+
+.no-bullets li {
+  margin: 10px 0; /* Add spacing between list items */
+}
+
