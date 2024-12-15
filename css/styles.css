@@ -1,32 +1,41 @@
+/* Dark grey background and overall page styling */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0 20px;
-  background-image: url('images/background.jpg'); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire page */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed; /* Keeps the image fixed during scrolling */
+  padding: 0;
+  line-height: 1.6;
+  background-color: #2b2b2b; /* Dark grey background */
+  color: #f0f0f0; /* Light grey text color for readability */
 }
 
 h1 {
-  color: #333; /* Optional: Add styling for the heading */
+  color: #ffffff; /* White color for heading */
+  text-align: center; /* Center the heading */
+  margin-top: 20px;
+}
+
+p {
+  text-align: center; /* Center align text */
+  margin: 10px 20px;
 }
 
 ul {
-  list-style-type: none; /* Removes bullet points from the list */
+  list-style: none; /* Remove bullet points */
   padding: 0;
+  text-align: center; /* Center align the list */
 }
 
 li {
-  margin: 10px 0; /* Adds spacing between list items */
+  margin: 10px 0;
 }
 
 a {
-  text-decoration: none; /* Removes underline from links */
-  color: blue;
+  text-decoration: none; /* Remove underline */
+  color: #1e90ff; /* Nice blue color for links */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color change on hover */
 }
 
 a:hover {
-  text-decoration: underline; /* Adds underline when hovering over links */
+  color: #ff7f50; /* Coral color on hover */
 }
