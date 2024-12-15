@@ -54,7 +54,7 @@ ul {
   padding: 0;
   margin: 20px; /* Standard spacing for regular lists */
   list-style: disc; /* Restore bullet points */
-  text-align: left; /* Align to the left */
+  text-align: center; /* Align to the left */
 }
 
 ul li {
@@ -92,8 +92,8 @@ ul.button-list a:hover {
 /* Scoped Certifications Page styling */
 .certifications-list {
   padding: 0;
-  text-align: left;
-  margin-left: 20px;
+  text-align: center;
+  margin-center: 20px;
 }
 
 .certifications-list li {
