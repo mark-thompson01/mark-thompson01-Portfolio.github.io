@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   line-height: 1.6;
   background-color: #2b2b2b; /* Dark grey background */
   color: #f0f0f0; /* Light grey text color for readability */
@@ -16,13 +16,14 @@ h1 {
 
 p {
   text-align: left; /* Center align text */
-  margin: 10px 20px;
+  margin-left: 20px; /* Adds space to the left for headings and paragraphs */
 }
 
 ul {
   list-style: none; /* Remove bullet points */
   padding: 0;
   text-align: left; /* Center align the list */
+  margin-left: 20px; /* Adds space to the left side */
 }
 
 li {
