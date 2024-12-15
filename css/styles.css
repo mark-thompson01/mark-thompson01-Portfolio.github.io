@@ -20,7 +20,7 @@ p {
 }
 
 .intro-text {
-  text-align: center; /* Center the text under the photo */
+  text-align: left; /* Center the text under the photo */
   font-style: italic; /* Make the text italic */
   color: #d3d3d3; /* Light grey color */
   margin-top: 10px; /* Add some spacing between the image and text */
