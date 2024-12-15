@@ -8,17 +8,20 @@ body {
   color: #f0f0f0; /* Light grey text color for readability */
 }
 
+/* Main heading styling */
 h1 {
   color: #d3d3d3; /* Lighter grey color */
   text-align: center; /* Center the heading */
   margin-top: 20px;
 }
 
+/* General paragraph styling */
 p {
   margin-left: 20px; /* Adds space to the left for general text */
   margin-right: 20px;
 }
 
+/* Introduction container */
 .intro-container {
   text-align: center; /* Centers the image and text */
   margin-top: 20px; /* Adds spacing between the heading and the container */
@@ -38,7 +41,7 @@ p {
   line-height: 1.8; /* Adjust line height for better readability */
 }
 
-/* Building in Progress section */
+/* Building in Progress section text */
 .progress-text {
   text-align: center;
   color: #f0f0f0; /* Light grey */
@@ -46,20 +49,32 @@ p {
   margin-top: 20px;
 }
 
-/* Styling the list of links as buttons */
+/* Default unordered list styling (for regular pages like Certifications) */
 ul {
-  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 20px; /* Standard spacing for regular lists */
+  list-style: disc; /* Restore bullet points */
+  text-align: left; /* Align to the left */
+}
+
+ul li {
+  margin: 5px 0; /* Add slight spacing between list items */
+}
+
+/* Scoped Button List Styling - ONLY for links under "Building in Progress" */
+ul.button-list {
+  list-style: none; /* Remove bullets */
   padding: 0;
   text-align: center; /* Center align the list */
   margin: 20px 0; /* Add space around the list */
 }
 
-li {
+ul.button-list li {
   display: inline-block; /* Place links in a row */
   margin: 10px; /* Add spacing between buttons */
 }
 
-a {
+ul.button-list a {
   text-decoration: none; /* Remove underline */
   color: #1e90ff; /* Nice blue color for links */
   font-weight: bold;
@@ -69,14 +84,19 @@ a {
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
 }
 
-a:hover {
+ul.button-list a:hover {
   background-color: #1e90ff; /* Blue hover background */
   color: #fff; /* White text on hover */
 }
 
-/* Adjustments for unordered lists */
-ul.links-list {
+/* Scoped Certifications Page styling */
+.certifications-list {
   padding: 0;
-  text-align: center;
-  margin: 20px auto;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.certifications-list li {
+  margin: 5px 0; /* Add spacing between items */
+  list-style: disc; /* Use bullet points for certifications */
 }
