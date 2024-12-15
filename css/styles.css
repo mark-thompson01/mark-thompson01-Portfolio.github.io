@@ -19,6 +19,15 @@ p {
   margin-left: 20px; /* Adds space to the left for headings and paragraphs */
 }
 
+.intro-container {
+  text-align: left;
+  margin-top: 20px; /* Adds spacing between the heading and the container */
+}
+
+.introp-container img {
+  display: black; /* Ensures proper alignment */
+  margin: 0 auto; /* Centers the image */
+
 .intro-text {
   text-align: left; /* Center the text under the photo */
   font-style: italic; /* Make the text italic */
