@@ -1,14 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #2b2b2b; /* Dark background */
+      color: #f0f0f0; /* Light grey text */
+    }
+
+    h1 {
+      text-align: left;
+      color: #d3d3d3; /* Lighter grey heading */
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-left: 20px;
+      text-align: left;
+    }
+
+    ul {
+      list-style: none; /* Remove bullets */
+      padding-left: 0; /* Remove default padding */
+      margin-left: 20px; /* Indent the list */
+    }
+
+    li {
+      margin: 10px 0; /* Add spacing between list items */
+      padding-left: 20px; /* Add indentation */
+      position: relative; /* For custom list bullets */
+    }
+
+    li::before {
+      content: "•"; /* Custom bullet point */
+      color: #1e90ff; /* Blue bullet color */
+      position: absolute;
+      left: 0;
+    }
+
+    a {
+      color: #1e90ff; /* Blue link color */
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff7f50; /* Coral hover color */
+      text-decoration: underline;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Projects</h1>
-  <p>Here are some of my GitHub projects:</p>
+  <h1>Lab Projects</h1>
+  <p>Here is a list of lab projects I have worked on as part of my learning and practice in cybersecurity:</p>
+
   <ul>
-    <li><a href="https://github.com/mark-thompson01/project1">Project 1</a></li>
-    <li><a href="https://github.com/mark-thompson01/project2">Project 2</a></li>
+    <li>Network Traffic Analysis</li>
+    <li>Windows Event Log Monitoring</li>
+    <li>ARP Spoofing</li>
+    <li>Network Hash Capture and Cracking</li>
+    <li>RDP Brute Force Attack and Remote Login</li>
+    <li>Web Server Enumeration and Exploitation</li>
+    <li>Active Reconnaissance</li>
   </ul>
+
+  <a href="../index.html" class="back-link">Back to Home</a>
 </body>
 </html>
