@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Traffic Analysis</title>
+</head>
+<body>
+    <h1>Network Traffic Analysis</h1>
+    
+    <h2>Introduction</h2>
+    <p>
+        In the realm of network security, understanding how to monitor and analyze network traffic is a fundamental skill. This lab serves as a practical demonstration of tcpdump and Wireshark, two indispensable tools for network analysis. This lab is designed to showcase their capabilities through a controlled creative scenario. The following outlines capturing, saving, and analyzing network traffic, with an emphasis on how these tools apply to real-world cybersecurity challenges.
+    </p>
+    <p>
+        The setup consists of a small, virtualized network consisting of two virtual machines (VMs): a Kali Linux VM for capturing and analyzing traffic, and a Ubuntu Linux VM. This setup allows simulation of diverse traffic scenarios and provides meaningful data for analysis.
+    </p>
+    
+    <h2>Lab Objectives</h2>
+    <p>The primary goals of this lab are:</p>
+    <ol>
+        <li>To introduce key tcpdump commands and demonstrate how to capture specific types of traffic.</li>
+        <li>To generate and examine diverse network traffic, including simulated malicious activity.</li>
+        <li>To save captured traffic to a file for further inspection using Wireshark.</li>
+    </ol>
+    
+    <h2>Lab Setup</h2>
+    <p>The lab environment consists of two interconnected VMs:</p>
+    <blockquote>
+        <strong>Kali Linux VM:</strong> Used for generating traffic with hping, capturing traffic with tcpdump, and analyzing it with Wireshark.<br>
+        <strong>Ubuntu Linux VM:</strong> Used as the simulated target to practice on with ports 22 and 80 open.
+    </blockquote>
+    <p>These machines are connected via a virtual network to ensure controlled and reproducible results.</p>
+    
+    <h2>What is tcpdump?</h2>
+    <p>
+        Tcpdump is a command-line tool used to capture and analyze network traffic. It acts metaphorically as a powerful magnifying glass, allowing us to filter and observe data packets as they traverse through a network medium. Tcpdump is a highly customizable command and forms the backbone of many network analysis workflows, particularly in cybersecurity. Its versatility and ability to save traffic for later analysis make it invaluable for professionals working to secure computer networks.
+    </p>
+    
+    <h2>Capturing Traffic with tcpdump</h2>
+    <p>With traffic flowing, it's time to capture it using tcpdump:</p>
+    <ul>
+        <li><strong>Basic Capture:</strong><br>
+            <code>tcpdump -i eth0</code><br>
+            Captures all traffic on the specified network interface.
+        </li>
+        <li><strong>Filter Capture:</strong><br>
+            <code>tcpdump -i eth0 port 80</code><br>
+            Captures HTTP traffic only, focusing on web interactions.
+        </li>
+        <li><strong>Advanced Filters:</strong><br>
+            <code>tcpdump -i eth0 src 10.38.1.113 and dst port 22</code><br>
+            Captures SSH traffic originating from the Kali VM to the Ubuntu VM.
+        </li>
+    </ul>
+    
+    <h2>Generating Network Traffic</h2>
+    <p>To produce traffic for analysis, traffic is realistically simulated and varied network interactions:</p>
+    <ol>
+        <li><strong>Ping Sweeps and Network Scans:</strong><br>
+            Conduct a ping sweep or a network scan from Kali using tools like fping to identify active hosts. These first three commands will generate a very large ARP storm.
+        </li>
+        <li><strong>File Transfers via SSH:</strong><br>
+            Establish an SSH session from Kali to Ubuntu and use scp to transfer files. This simulates secure file transfer.
+        </li>
+        <li><strong>Simulated Malicious Activity:</strong><br>
+            Use tools like hping3 on Kali to create malformed or suspicious packets, mimicking attack patterns.
+        </li>
+    </ol>
+    
+    <h2>Saving Captures for Analysis</h2>
+    <p>
+        To preserve captured traffic for analysis with Wireshark, use the <code>-w</code> option:<br>
+        <code>tcpdump -i eth0 -w network_capture.pcap</code><br>
+        This saves the traffic to a PCAP file, which can be loaded into Wireshark for detailed inspection.
+    </p>
+    
+    <h2>Analyzing Traffic with Wireshark</h2>
+    <ol>
+        <li><strong>Load the Capture:</strong> Open the <code>network_capture.pcap</code> file in Wireshark.</li>
+        <li><strong>Apply Filters:</strong> Use Wireshark's powerful filtering capabilities to isolate specific types of traffic, such as HTTP, ICMP, or SSH.</li>
+        <li><strong>Identify Patterns and Anomalies:</strong>
+            <ul>
+                <li>Examine HTTP requests and responses to analyze web activity.</li>
+                <li>Investigate SSH traffic for unauthorized access attempts.</li>
+                <li>Detect unusual packet structures indicative of malicious behavior.</li>
+            </ul>
+        </li>
+    </ol>
+    <p>
+        The commands in this lab produce various traffic types on computer networks. Captured traffic simulates reconnaissance, attacks, and legitimate activity. The most interesting findings are analyzed below.
+    </p>
+    
+    <h3>Reconnaissance Traffic</h3>
+    <ul>
+        <li><strong>ARP-Scan Traffic:</strong> Demonstrates systematic ARP requests and replies to identify active hosts.</li>
+        <li><strong>Ping Sweep Traffic:</strong> Shows ICMP echo requests and responses for discovering live hosts.</li>
+        <li><strong>Nmap Scan Traffic:</strong> Highlights an Nmap SYN scan to detect open ports and services.</li>
+    </ul>
+    
+    <h3>SSH Traffic</h3>
+    <p>Detailed analysis includes TCP three-way handshakes, key exchanges, and encrypted traffic patterns.</p>
+    
+    <h3>TCP SYN Flood on Port 80</h3>
+    <p>
+        Illustrates a denial-of-service attack using rapid SYN packets to overwhelm the target's resources.
+    </p>
+    
+    <h3>Malformed (Fragmented) Packets</h3>
+    <p>Explores packet fragmentation as an evasion tactic.</p>
+    
+    <h3>Custom Payload</h3>
+    <p>Demonstrates suspicious traffic with crafted payloads and TCP resets.</p>
+    
+    <h3>Spoofed Traffic</h3>
+    <p>Shows how attackers can use spoofed IP addresses to hide their true source.</p>
+    
+    <h2>Real World Application</h2>
+    <p>
+        This lab demonstrates how tcpdump and Wireshark can be used in a professional setting to monitor, diagnose, and secure network environments. From identifying potential intrusions to analyzing legitimate traffic patterns, these tools provide cybersecurity professionals with critical visibility into network activity.
+    </p>
+</body>
+</html>
 
