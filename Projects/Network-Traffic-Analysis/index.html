@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Traffic Analysis</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #ffffff; /* White for headings */
+        }
+        code {
+            background-color: #2e2e2e; /* Slightly lighter background for code blocks */
+            color: #e0e0e0; /* Light text */
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        blockquote {
+            background-color: #1e1e1e;
+            border-left: 5px solid #4caf50; /* Green accent */
+            padding: 10px;
+            margin: 10px 0;
+            color: #cfcfcf;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        a {
+            color: #4caf50; /* Green links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>Network Traffic Analysis</h1>
@@ -87,33 +124,6 @@
             </ul>
         </li>
     </ol>
-    <p>
-        The commands in this lab produce various traffic types on computer networks. Captured traffic simulates reconnaissance, attacks, and legitimate activity. The most interesting findings are analyzed below.
-    </p>
-    
-    <h3>Reconnaissance Traffic</h3>
-    <ul>
-        <li><strong>ARP-Scan Traffic:</strong> Demonstrates systematic ARP requests and replies to identify active hosts.</li>
-        <li><strong>Ping Sweep Traffic:</strong> Shows ICMP echo requests and responses for discovering live hosts.</li>
-        <li><strong>Nmap Scan Traffic:</strong> Highlights an Nmap SYN scan to detect open ports and services.</li>
-    </ul>
-    
-    <h3>SSH Traffic</h3>
-    <p>Detailed analysis includes TCP three-way handshakes, key exchanges, and encrypted traffic patterns.</p>
-    
-    <h3>TCP SYN Flood on Port 80</h3>
-    <p>
-        Illustrates a denial-of-service attack using rapid SYN packets to overwhelm the target's resources.
-    </p>
-    
-    <h3>Malformed (Fragmented) Packets</h3>
-    <p>Explores packet fragmentation as an evasion tactic.</p>
-    
-    <h3>Custom Payload</h3>
-    <p>Demonstrates suspicious traffic with crafted payloads and TCP resets.</p>
-    
-    <h3>Spoofed Traffic</h3>
-    <p>Shows how attackers can use spoofed IP addresses to hide their true source.</p>
     
     <h2>Real World Application</h2>
     <p>
@@ -121,4 +131,3 @@
     </p>
 </body>
 </html>
-
