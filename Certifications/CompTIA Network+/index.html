@@ -15,10 +15,16 @@
     h1, h2 {
       color: #d3d3d3; /* Lighter grey */
     }
+    .container {
+      display: flex;
+      align-items: flex-start; /* Align content at the top */
+      gap: 20px; /* Space between text and image */
+    }
+    .content {
+      flex: 1; /* Text takes remaining space */
+    }
     .certificate-image {
-      display: block;
-      margin: 20px auto; /* Center image */
-      max-width: 100%; /* Responsive image */
+      max-width: 40%; /* Adjust image width */
       height: auto;
       border: 2px solid #444;
       border-radius: 5px;
@@ -28,16 +34,16 @@
 </head>
 <body>
   <h1>CompTIA Network+ Certification</h1>
-  <h2>About</h2>
-  <p>
-    The CompTIA Network+ certification validates technical skills in configuring, managing, and troubleshooting wired and wireless networks.
-  </p>
-  <h2>My Experience</h2>
-  <p>
-    Through the Network+ certification, I gained a strong understanding of networking concepts such as IP addressing, routing, and troubleshooting. 
-    It provided a critical foundation for my journey into IT and cybersecurity.
-  </p>
-  <img src="../Images/CompTIA%20Network+.png" alt="CompTIA Network+ Certification" class="certificate-image">
-</body>
-</html>
+  <div class="container">
+    <!-- Left-Aligned Image -->
+    <img src="../Images/CompTIA_Network+.png" alt="CompTIA Network+ Certification" class="certificate-image">
 
+    <!-- Content on the Right -->
+    <div class="content">
+      <h2>About</h2>
+      <p>
+        The CompTIA Network+ certification validates the technical skills needed to configure, manage, and troubleshoot wired and wireless networks.
+      </p>
+      <h2>My Experience</h2>
+      <p>
+        Completing the Network+ certification gave me a solid foundation
