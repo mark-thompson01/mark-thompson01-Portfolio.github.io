@@ -35,14 +35,20 @@
       margin-top: 20px;
       line-height: 1.8;
     }
+    .container {
+      display: flex; /* Enables side-by-side layout */
+      align-items: flex-start; /* Align items at the top */
+      gap: 20px; /* Space between image and text */
+    }
     .certificate-image {
-      display: block;
-      margin: 20px auto; /* Center the image */
-      max-width: 100%; /* Ensure it fits on all screen sizes */
+      max-width: 40%; /* Adjust image width */
       height: auto;
       border: 2px solid #444; /* Optional border for styling */
       border-radius: 5px; /* Slight rounding on corners */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    }
+    .text-content {
+      flex: 1; /* Allows text to take the remaining space */
     }
   </style>
 </head>
@@ -68,15 +74,20 @@
   </ul>
 
   <h2>My Experience</h2>
-  <p class="experience">
-    As a cybersecurity enthusiast passionate about learning offensive security, I was very ambitious to take on 
-    eLearning Security's Penetration Testing Student learning path. After earning the 
-    <strong>CompTIA PenTest+</strong> certification as part of my pentesting journey in November of 2023, 
-    the lab-based training with <strong>eJPT</strong> really helped follow up with putting these concepts into practice. 
-    This allowed me to apply these techniques and expand my skills in both virtual and physical lab setups.
-  </p>
-
-  <!-- Certificate Image -->
-  <img src="Images/eJPT.png" alt="eJPT" class="certificate-image">
+  <div class="container">
+    <!-- Left-Aligned Image -->
+    <img src="Images/eJPT.png" alt="eJPT" class="certificate-image">
+    
+    <!-- Text Content on the Right -->
+    <div class="text-content">
+      <p class="experience">
+        As a cybersecurity enthusiast passionate about learning offensive security, I was very ambitious to take on 
+        eLearning Security's Penetration Testing Student learning path. After earning the 
+        <strong>CompTIA PenTest+</strong> certification as part of my pentesting journey in November of 2023, 
+        the lab-based training with <strong>eJPT</strong> really helped follow up with putting these concepts into practice. 
+        This allowed me to apply these techniques and expand my skills in both virtual and physical lab setups.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
