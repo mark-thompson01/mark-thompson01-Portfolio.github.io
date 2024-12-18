@@ -48,7 +48,10 @@
     <h1>Network Traffic Analysis</h1>
     <h2>Introduction</h2>
     <p>
-        In the realm of network security, understanding how to monitor and analyze network traffic is a fundamental skill. This lab serves as a practical demonstration of <code>tcpdump</code> and Wireshark, two indispensable tools for network analysis.
+        In the realm of network security, understanding how to monitor and analyze network traffic is a fundamental skill. This lab serves as a practical demonstration of <code>tcpdump</code> and Wireshark, two indispensable tools for network analysis. This lab is designed to showcase their capabilities through a controlled creative scenario. The following outlines capturing, saving, and analyzing network traffic, with an emphasis on how these tools apply to real-world cybersecurity challenges.
+
+The setup consists of a small, virtualized network consisting of two virtual machines (VMs): a Kali Linux VM for capturing and analyzing traffic, and a Ubuntu Linux VM. This setup allows to simulate diverse traffic scenarios and provides meaningful data for analysis.
+        
     </p>
     <h2>Lab Objectives</h2>
     <ul>
@@ -61,6 +64,8 @@
         <strong>Kali Linux VM:</strong> Used for generating traffic with <code>hping</code> and capturing traffic with <code>tcpdump</code>.<br>
         <strong>Ubuntu Linux VM:</strong> Used as the simulated target with ports 22 and 80 open.
     </blockquote>
+
+    <p>These machines are connected via a virtual network to ensure controlled and reproducible results.</p>
 
     <h2>What is tcpdump?</h2>
     <p>
