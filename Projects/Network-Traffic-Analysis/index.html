@@ -72,12 +72,26 @@ The setup consists of a small, virtualized network consisting of two virtual mac
         <code>tcpdump</code> is a command-line tool used to capture and analyze network traffic. It acts metaphorically as a powerful magnifying glass, allowing us to filter and observe data packets as they traverse through a network medium. Tcpdump is a highly customizable command and forms the backbone of many network analysis workflows, particularly in cybersecurity. It’s versatility and ability to save traffic for later analysis make it invaluable for professionals working to secure computer networks.
     </p>
 
-    <h2>Capturing Traffic with tcpdump</h2>
-    <ul>
-        <li><strong>Basic Capture:</strong> <code>tcpdump -i eth0</code></li>
-        <li><strong>Filter Capture:</strong> <code>tcpdump -i eth0 port 80</code></li>
-        <li><strong>Advanced Filters:</strong> <code>tcpdump -i eth0 src 10.38.1.113 and dst port 22</code></li>
-    </ul>
+   <h2>Capturing Traffic with tcpdump</h2>
+<p>With traffic flowing, it's time to capture it using <code>tcpdump</code>:</p>
+<ul>
+    <li>
+        <strong>Basic Capture:</strong><br>
+        <code>tcpdump -i eth0</code><br>
+        Captures all traffic on the specified network interface.
+    </li>
+    <li>
+        <strong>Filter Capture:</strong><br>
+        <code>tcpdump -i eth0 port 80</code><br>
+        Captures HTTP traffic only, focusing on web interactions.
+    </li>
+    <li>
+        <strong>Advanced Filters:</strong><br>
+        <code>tcpdump -i eth0 src 10.38.1.113 and dst port 22</code><br>
+        Captures SSH traffic originating from the Kali VM to the Ubuntu VM.
+    </li>
+</ul>
+
 
     <h2>Generating Network Traffic</h2>
     <h3>1. Ping Sweeps and Network Scans</h3>
